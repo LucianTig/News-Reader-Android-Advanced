@@ -18,25 +18,17 @@ public class ArticleListViewModel extends ViewModel implements LifecycleObserver
     public ObservableList<ArticleItemViewModel> newsList = new ObservableArrayList();
 
 
-    public ArticleListViewModel(){
-        ArticleItemViewModel item1=new ArticleItemViewModel();
-        ArticleItemViewModel item2=new ArticleItemViewModel();
-        ArticleItemViewModel item3=new ArticleItemViewModel();
-        ArticleItemViewModel item4=new ArticleItemViewModel();
 
-        newsList.add(item1);
-        newsList.add(item2);
-        newsList.add(item3);
-        newsList.add(item4);
-    }
+
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void refresh(){
+
         Log.e(TAG, "ONREFRESH");
-        ArticleItemViewModel item1=new ArticleItemViewModel();
-        ArticleItemViewModel item2=new ArticleItemViewModel();
-        ArticleItemViewModel item3=new ArticleItemViewModel();
-        ArticleItemViewModel item4=new ArticleItemViewModel();
+        ArticleItemViewModel item1=new ArticleItemViewModel(null);
+        ArticleItemViewModel item2=new ArticleItemViewModel(null);
+        ArticleItemViewModel item3=new ArticleItemViewModel(null);
+        ArticleItemViewModel item4=new ArticleItemViewModel(null);
 
         newsList.add(item1);
         newsList.add(item2);

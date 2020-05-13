@@ -29,14 +29,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="McLaren720s"
+                android:text="@{viewModel.title}"
                 android:textStyle="bold"
                 android:textSize="25sp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/mclarenText"
+                android:text="@{viewModel.content}"
                 android:ellipsize="end"
                 android:maxEms="15"
                 android:maxLines="7"
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/car_image" />
+            android:src="@{viewModel.imageUrl}" />
 
     </LinearLayout>
 </layout>

@@ -23,24 +23,12 @@ public class MainFragment extends Fragment {
         return new MainFragment();
     }
 
-    /*@Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.article_list_fragment, container, false);
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(ArticleItemViewModel.class);
-        // TODO: Use the ViewModel
-    }*/
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(ArticleListViewModel.class);
+        getLifecycle().addObserver(mViewModel);
     }
 
     @Nullable

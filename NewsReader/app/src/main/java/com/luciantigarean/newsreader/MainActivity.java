@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.luciantigarean.newsreader.ui.main.MainFragment;
+import com.luciantigarean.newsreader.feature.todolist.fragment.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 

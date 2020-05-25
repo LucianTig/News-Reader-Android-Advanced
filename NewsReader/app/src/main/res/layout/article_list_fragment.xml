@@ -5,10 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="handler"
+            type="com.luciantigarean.newsreader.feature.todolist.listener.ArticleHandler" />
 
         <variable
             name="viewModel"
-            type="com.luciantigarean.newsreader.ui.main.ArticleListViewModel" />
+            type="com.luciantigarean.newsreader.feature.todolist.model.ArticleListViewModel" />
 
     </data>
 

@@ -1,4 +1,4 @@
-package com.luciantigarean.newsreader.ui.main;
+package com.luciantigarean.newsreader.feature.todolist.adapter;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -7,6 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.luciantigarean.newsreader.databinding.ArticleItemBinding;
+import com.luciantigarean.newsreader.feature.todolist.listener.ArticleHandler;
+import com.luciantigarean.newsreader.feature.todolist.model.ArticleItemViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
 public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.TaskViewHolder> {
 
     private List<ArticleItemViewModel> taskModelList;
-    private ToDoHandler handler;
+    private ArticleHandler handler;
 
     public ArticleListAdapter() {
         this.taskModelList = new ArrayList<>();
@@ -41,7 +43,7 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
         return taskModelList.size();
     }
 
-    public void setItems(List<ArticleItemViewModel> items, ToDoHandler handler) {
+    public void setItems(List<ArticleItemViewModel> items, ArticleHandler handler) {
         this.handler = handler;
         this.taskModelList = items;
         notifyDataSetChanged();

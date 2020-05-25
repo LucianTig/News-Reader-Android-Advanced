@@ -1,4 +1,6 @@
-package com.luciantigarean.newsreader.ui.main;
+package com.luciantigarean.newsreader.feature.todolist.listener;
+
+import com.luciantigarean.newsreader.feature.todolist.model.ArticleItemViewModel;
 
 public interface ArticleHandler {
 

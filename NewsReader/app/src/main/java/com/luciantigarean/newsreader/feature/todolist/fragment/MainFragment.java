@@ -1,4 +1,4 @@
-package com.luciantigarean.newsreader.ui.main;
+package com.luciantigarean.newsreader.feature.todolist.fragment;
 
 import androidx.lifecycle.ViewModelProviders;
 
@@ -12,8 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.luciantigarean.newsreader.R;
 import com.luciantigarean.newsreader.databinding.ArticleListFragmentBinding;
+import com.luciantigarean.newsreader.feature.todolist.model.ArticleListViewModel;
+import com.luciantigarean.newsreader.feature.todolist.model.ViewModelFactory;
 
 public class MainFragment extends Fragment {
 
@@ -27,7 +28,8 @@ public class MainFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(ArticleListViewModel.class);
+        ViewModelFactory factory = new ViewModelFactory();
+        mViewModel = ViewModelProviders.of(this,factory).get(ArticleListViewModel.class);
         getLifecycle().addObserver(mViewModel);
     }
 

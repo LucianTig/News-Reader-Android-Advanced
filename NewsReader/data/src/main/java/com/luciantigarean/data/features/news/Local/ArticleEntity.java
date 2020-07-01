@@ -70,7 +70,7 @@ public class ArticleEntity {
         this.description = description;
     }
 
-    public void setUrlToImage(String urlToImage){
-        this.imageUrl=urlToImage;
+    public void setUrlToImage(String urlToImage) {
+        this.imageUrl = urlToImage;
     }
 }

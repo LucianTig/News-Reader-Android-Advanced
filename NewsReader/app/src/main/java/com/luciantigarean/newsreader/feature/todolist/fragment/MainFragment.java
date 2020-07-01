@@ -29,7 +29,7 @@ public class MainFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewModelFactory factory = new ViewModelFactory();
-        mViewModel = ViewModelProviders.of(this,factory).get(ArticleListViewModel.class);
+        mViewModel = ViewModelProviders.of(this, factory).get(ArticleListViewModel.class);
         getLifecycle().addObserver(mViewModel);
     }
 

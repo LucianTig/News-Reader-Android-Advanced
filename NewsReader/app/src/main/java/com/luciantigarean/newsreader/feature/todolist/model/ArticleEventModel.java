@@ -2,18 +2,18 @@ package com.luciantigarean.newsreader.feature.todolist.model;
 
 import androidx.annotation.IntDef;
 
-public class ToDoEventModel {
+public class ArticleEventModel {
     @EventType
     public final int eventType;
 
     public final ArticleItemViewModel item;
 
-    ToDoEventModel(@EventType int eventType, ArticleItemViewModel item) {
+    ArticleEventModel(@EventType int eventType, ArticleItemViewModel item) {
         this.eventType = eventType;
         this.item = item;
     }
 
-    ToDoEventModel(@EventType int eventType) {
+    ArticleEventModel(@EventType int eventType) {
         this.eventType = eventType;
         this.item = null;
     }

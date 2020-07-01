@@ -29,9 +29,9 @@ public class ArticleLocalDataStore {
     }
 
     public Completable saveItem(ArticleEntity articleEntity) {
-        if(articleEntity.id==null){
+        if (articleEntity.id == null) {
             return dao.insertArticle(articleEntity);
-        }else{
+        } else {
             return null;
         }
     }

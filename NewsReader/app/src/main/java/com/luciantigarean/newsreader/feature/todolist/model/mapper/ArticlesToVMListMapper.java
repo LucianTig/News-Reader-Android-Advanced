@@ -12,15 +12,15 @@ import io.reactivex.functions.Function;
 
 import static android.content.ContentValues.TAG;
 
-public class ArticlesToVMListMapper  implements Function<List<Article>, List<ArticleItemViewModel>> {
+public class ArticlesToVMListMapper implements Function<List<Article>, List<ArticleItemViewModel>> {
 
     @Override
     public List<ArticleItemViewModel> apply(List<Article> articles) throws Exception {
 
         Log.e(TAG, "ArticlesToVMListMapper ");
-        List<ArticleItemViewModel> articleItemViewModels=new ArrayList<>();
-        for(Article article: articles){
-            Log.e(TAG, "ArticlesToVMListMapper "+article.title);
+        List<ArticleItemViewModel> articleItemViewModels = new ArrayList<>();
+        for (Article article : articles) {
+            Log.e(TAG, "ArticlesToVMListMapper " + article.title);
             ArticleItemViewModel viewModelItem = new ArticleItemViewModel();
             viewModelItem.content.set(article.content);
             viewModelItem.imageUrl.set(article.imageUrl);

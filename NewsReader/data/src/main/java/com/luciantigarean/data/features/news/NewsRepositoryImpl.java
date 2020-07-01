@@ -1,7 +1,6 @@
 package com.luciantigarean.data.features.news;
 
 
-
 import com.luciantigarean.data.NewsRepository;
 import com.luciantigarean.data.features.news.Local.ArticleEntity;
 import com.luciantigarean.data.features.news.Local.ArticleLocalDataStore;
@@ -27,7 +26,7 @@ public class NewsRepositoryImpl implements NewsRepository {
 
     public NewsRepositoryImpl(NewsRemoteSource remoteSource, ArticleLocalDataStore localDataStore) {
         this.remoteSource = remoteSource;
-        this.localDataStore=localDataStore;
+        this.localDataStore = localDataStore;
     }
 
     /*@Override
@@ -47,7 +46,7 @@ public class NewsRepositoryImpl implements NewsRepository {
                     public List<ArticleEntity> apply(ArticleListDto articleListDto) {
                         List<ArticleEntity> articleEntityList = new ArrayList<>();
                         List<ArticleDto> list1 = articleListDto.articles;
-                        for(ArticleDto article: list1) {
+                        for (ArticleDto article : list1) {
                             ArticleEntity articleEntity = new ArticleEntity();
                             articleEntity.setTitle(article.title);
                             articleEntity.setUrlToImage(article.urlToImage);

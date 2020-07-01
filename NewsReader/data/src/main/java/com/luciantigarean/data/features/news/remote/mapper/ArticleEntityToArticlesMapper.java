@@ -18,9 +18,9 @@ public class ArticleEntityToArticlesMapper implements Function<List<ArticleEntit
     @Override
     public List<Article> apply(List<ArticleEntity> articleEntities) throws Exception {
 
-        List<Article> articles=new ArrayList<>();
-        for(ArticleEntity articleEntity: articleEntities){
-            Article articleItem = new Article(articleEntity.imageUrl,articleEntity.title,articleEntity.content,articleEntity.description);
+        List<Article> articles = new ArrayList<>();
+        for (ArticleEntity articleEntity : articleEntities) {
+            Article articleItem = new Article(articleEntity.imageUrl, articleEntity.title, articleEntity.content, articleEntity.description);
             articles.add(articleItem);
 
         }

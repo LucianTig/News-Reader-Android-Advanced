@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.luciantigarean.data.di.RepoModule;
 
-public class ToDoApplication extends Application {
+public class NewsReaderApplication extends Application {
 
     //move along, will be replaced with Dagger later
     private static RepoModule repoModule;

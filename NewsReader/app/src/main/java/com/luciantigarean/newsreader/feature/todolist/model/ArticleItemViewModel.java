@@ -27,17 +27,17 @@ public class ArticleItemViewModel extends ViewModel {
     public final ObservableField<String> description;
 
     public ArticleItemViewModel() {
-        this.title=new ObservableField<>("");
-        this.content=new ObservableField<>("");
-        this.imageUrl=new ObservableField<>("");
-        this.description=new ObservableField<>("");
+        this.title = new ObservableField<>("");
+        this.content = new ObservableField<>("");
+        this.imageUrl = new ObservableField<>("");
+        this.description = new ObservableField<>("");
     }
 
     public ArticleItemViewModel(String title, String content) {
-        this.title=new ObservableField<>(title);
-        this.content=new ObservableField<>(content);
-        this.imageUrl=new ObservableField<>("");
-        this.description=new ObservableField<>("");
+        this.title = new ObservableField<>(title);
+        this.content = new ObservableField<>(content);
+        this.imageUrl = new ObservableField<>("");
+        this.description = new ObservableField<>("");
     }
 
 

@@ -5,6 +5,7 @@ import com.luciantigarean.data.features.news.remote.NewsRemoteSource;
 import com.luciantigarean.data.features.news.remote.mapper.NewsDtoToNewsMapper;
 
 import java.util.List;
+
 import io.reactivex.Single;
 import io.reactivex.annotations.NonNull;
 

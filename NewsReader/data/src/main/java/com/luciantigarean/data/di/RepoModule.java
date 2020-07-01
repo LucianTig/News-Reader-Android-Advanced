@@ -33,7 +33,7 @@ public class RepoModule {
     }*/
 
     public NewsRepository provideNewsRepository() {
-        return new NewsRepositoryImpl(provideNewsRemoteSource(),provideLocalDataStore());
+        return new NewsRepositoryImpl(provideNewsRemoteSource(), provideLocalDataStore());
     }
 
     ArticleLocalDataStore provideLocalDataStore() {

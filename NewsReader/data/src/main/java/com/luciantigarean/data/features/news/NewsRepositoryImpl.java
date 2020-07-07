@@ -29,17 +29,9 @@ public class NewsRepositoryImpl implements NewsRepository {
         this.localDataStore = localDataStore;
     }
 
-    /*@Override
-    @NonNull
-    public Single<List<Article>> getNewsArticles() {
-        return remoteSource.getNewsArticles()
-                .map(new NewsDtoToNewsMapper());
-    }*/
-
     @NonNull
     @Override
     public Single<List<Article>> getNewsArticles() {
-        // return remoteSource.getNewsArticles().map(new NewsDtoToNewsMapper());
         return remoteSource.getNewsArticles()
                 .map(new Function<ArticleListDto, List<ArticleEntity>>() {
                     @Override
@@ -48,10 +40,10 @@ public class NewsRepositoryImpl implements NewsRepository {
                         List<ArticleDto> list1 = articleListDto.articles;
                         for (ArticleDto article : list1) {
                             ArticleEntity articleEntity = new ArticleEntity();
-                            articleEntity.setTitle(article.title);
-                            articleEntity.setUrlToImage(article.urlToImage);
-                            articleEntity.setContent(article.content);
-                            articleEntity.setDescription(article.description);
+                            articleEntity.title = article.title;
+                            articleEntity.imageUrl = article.urlToImage;
+                            articleEntity.content = article.content;
+                            articleEntity.description = article.description;
                             articleEntityList.add(articleEntity);
                         }
                         return articleEntityList;

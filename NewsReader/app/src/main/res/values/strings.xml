@@ -1,7 +1,4 @@
 <resources>
     <string name="app_name">News Reader</string>
-    <string name="mclarenText">The McLaren 720S is a sports car designed and manufactured by British automobile manufacturer McLaren Automotive. It is the second all-new car in the McLaren Super Series, replacing the 650S beginning in May 2017.
-
-The 720S was launched at the Geneva Motor Show on 7 March 2017 and is built on a modified carbon monocoque, which is lighter and stiffer in contrast to the 650S.</string>
     <string name="news_api">a68682d93f0447aa8bea89fe0c3ba4b3</string>
 </resources>

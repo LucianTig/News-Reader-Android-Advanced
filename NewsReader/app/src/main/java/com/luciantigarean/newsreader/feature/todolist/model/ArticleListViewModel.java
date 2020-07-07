@@ -58,20 +58,10 @@ public class ArticleListViewModel extends ViewModel implements LifecycleObserver
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         this::onNewsArticlesReceived,
-//                        ArticleItemViewModel -> onNewsArticlesReceived(ArticleItemViewModel),
                         this::onNewsArticlesError
                 );
 
         Log.e(TAG, "ONREFRESH");
-        /*ArticleItemViewModel item1=new ArticleItemViewModel("Masina anului", "Nu este electrica");
-        ArticleItemViewModel item2=new ArticleItemViewModel("Masina annului", "Nu este electrica");
-        ArticleItemViewModel item3=new ArticleItemViewModel("Masina annului", "Nu este electrica");
-        ArticleItemViewModel item4=new ArticleItemViewModel("Masina annului", "Nu este electrica");
-
-        newsList.add(item1);
-        newsList.add(item2);
-        newsList.add(item3);
-        newsList.add(item4);*/
     }
 
     private void onNewsArticlesReceived(List<ArticleItemViewModel> toDoItems) {
@@ -82,7 +72,6 @@ public class ArticleListViewModel extends ViewModel implements LifecycleObserver
 
     private void onNewsArticlesError(Throwable throwable) {
         Log.e(TAG, "onNewsArticlesError");
-        //disposable.dispose();
     }
 
     @Override
